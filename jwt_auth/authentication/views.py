@@ -98,7 +98,7 @@ class AuthView(APIView):
 
 
 class LogoutView(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
         if hasattr(request, "user") and request.user:

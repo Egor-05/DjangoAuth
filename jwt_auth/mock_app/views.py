@@ -3,14 +3,12 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .permissions import IsUser, IsCreatorOrAdmin
-from rest_framework.permissions import IsAdminUser
 from jsonschema import validate, ValidationError
 from .serializers import ProductListSerializer
 import json
 
 
 from .models import Product
-from authentication.models import User
 
 
 class CreateProductView(APIView):
